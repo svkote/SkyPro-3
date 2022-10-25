@@ -39,8 +39,8 @@ def get_by_skill(skill_name) -> list:
     candidates = []
 
     for candidate in data:
-        if skill_name in candidate['skills']:
-            candidates.append(candidate['name'])
+        if skill_name.lower() in candidate['skills'].lower():
+            candidates.append(candidate)
 
     return candidates
 

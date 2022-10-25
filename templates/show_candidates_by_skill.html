@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+</head>
+<body>
+{% if candidates %}
+    {% for candidate in candidates %}
+        <h4>Имя кандидата - {{ candidate['name'] }}</h4>
+        <p>Позиция кандидата <b>{{ candidate['position'] }}</b></p>
+        <p>Навыки через запятую: <b>{{ candidate['skills'] }}</b></p>
+    {% endfor %}
+
+{% else %}
+    <p>Такого навыка не существует</p>
+{% endif %}
+
+</body>
+</html>
