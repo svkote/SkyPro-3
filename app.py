@@ -23,10 +23,5 @@ def show_candidates_by_skill(skill):
     return render_template('show_candidates_by_skill.html', candidates=candidates)
 
 
-# `load_candidates()`, которая загрузит данные из файла
-# `get_all()`, которая покажет всех кандидатов
-# `get_by_pk(pk)`, которая вернет кандидата по pk
-# `get_by_skill(skill_name)`, которая вернет кандидатов по навыку
-
 if __name__ == '__main__':
     app.run()
