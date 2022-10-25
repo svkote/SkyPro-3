@@ -5,12 +5,14 @@
     <title>Главная</title>
 </head>
 <body>
-{% for candidate in data %}
-{#    <img src="{{ candidate['picture'] }}" alt="">#}
-    <h4> <a href="candidates/{{ candidate['pk'] }}">Имя кандидата - {{ candidate['name'] }}</a></h4>
+{% if candidate %}
+    <img src="{{ candidate['picture'] }}" alt="">
+    <h4>Имя кандидата - {{ candidate['name'] }}</h4>
     <p>Позиция кандидата <b>{{ candidate['position'] }}</b></p>
     <p>Навыки через запятую: <b>{{ candidate['skills'] }}</b></p>
-{% endfor %}
+{% else %}
+    <p>Такого кандидата не существует</p>
+{% endif %}
 
 </body>
 </html>

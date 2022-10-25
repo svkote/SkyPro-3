@@ -30,7 +30,7 @@ def get_by_pk(pk) -> dict or str:
         if candidate['pk'] == pk:
             return candidate
 
-    return 'Такого кандидата нет'
+    return None
 
 
 def get_by_skill(skill_name) -> list:

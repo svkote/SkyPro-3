@@ -11,6 +11,12 @@ def page_index():
     return render_template('index.html', data=data)
 
 
+@app.route("/candidates/<int:pk>")
+def show_candidate(pk):
+    candidate = get_by_pk(pk)
+    return render_template('show_candidate.html', candidate=candidate)
+
+
 # `load_candidates()`, которая загрузит данные из файла
 # `get_all()`, которая покажет всех кандидатов
 # `get_by_pk(pk)`, которая вернет кандидата по pk
