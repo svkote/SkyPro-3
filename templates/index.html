@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+</head>
+<body>
+{% for candidate in data %}
+    <h4> <a href="candidates/{{ candidate['pk'] }}">Имя кандидата - {{ candidate['name'] }}</a></h4>
+    <p>Позиция кандидата {{ candidate['position'] }}</p>
+    <p>Навыки через запятую: {{ candidate['skills'] }}</p>
+{% endfor %}
+
+</body>
+</html>
